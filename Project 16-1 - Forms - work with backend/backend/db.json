@@ -1,0 +1,32 @@
+{
+  "opinions": [
+    {
+      "id": 1734895515322,
+      "votes": 3,
+      "userName": "Artur",
+      "title": "Test actions",
+      "body": "Test form actions"
+    },
+    {
+      "id": 1734894977820,
+      "votes": 1,
+      "userName": "Artur",
+      "title": "Great",
+      "body": "React is great"
+    },
+    {
+      "id": 1,
+      "userName": "Maximilian Schwarzmüller",
+      "title": "Do yourself a favor and learn React!",
+      "body": "React is an amazing JavaScript library!\n\nDespite all it's shortcomings.",
+      "votes": 1
+    },
+    {
+      "id": 2,
+      "userName": "Maximilian Schwarzmüller",
+      "title": "React has more depth than you might first think!",
+      "body": "React is a great library to learn, but it's not just about the basics. Dive deeper!\nFor example with this course!",
+      "votes": 0
+    }
+  ]
+}
