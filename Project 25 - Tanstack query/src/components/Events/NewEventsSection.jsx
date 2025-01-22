@@ -8,8 +8,8 @@ export default function NewEventsSection() {
 	const { data, isPending, isError, error } = useQuery({
 		queryKey: ['events'],
 		queryFn: fetchEvents,
-		staleTime: 5000,  //when data are re-rendered after this time - tanstack sends new request - if not it use cached data without checking it by request
-		gcTime: 30000, //  how long data is kept around in cache
+		staleTime: 5000, //when data are re-rendered after this time - tanstack sends new request - if not it use cached data without checking it by request
+		//gcTime: 30000, //  how long data is kept around in cache
 	});
 	``;
 
