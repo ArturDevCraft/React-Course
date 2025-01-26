@@ -6,8 +6,8 @@ import { fetchEvents } from '../../util/http.js';
 
 export default function NewEventsSection() {
 	const { data, isPending, isError, error } = useQuery({
-		queryKey: ['events'],
-		queryFn: fetchEvents,
+		queryKey: ['events', { max: 3 }],
+		queryFn: ({ signal, queryKey }) => fetchEvents({ signal, ...queryKey[1] }),
 		staleTime: 5000, //when data are re-rendered after this time - tanstack sends new request - if not it use cached data without checking it by request
 		//gcTime: 30000, //  how long data is kept around in cache
 	});
