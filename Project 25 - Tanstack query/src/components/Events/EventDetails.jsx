@@ -16,7 +16,7 @@ export default function EventDetails() {
 		isError: isDeleteError,
 		error: deleteError,
 	} = useMutation({
-		mutationFn: () => deleteEvent({ id }),
+		mutationFn: deleteEvent,
 		onSuccess: () => {
 			queryClient.invalidateQueries({ queryKey: ['events'] });
 			navigate('/events');
@@ -24,12 +24,12 @@ export default function EventDetails() {
 	});
 
 	const { data, isPending, isError, error } = useQuery({
-		queryKey: ['event-' + id],
+		queryKey: ['events', id],
 		queryFn: ({ signal }) => fetchEvent({ id, signal }),
 	});
 
 	function handleDelete() {
-		mutate();
+		mutate({ id });
 	}
 
 	return (
