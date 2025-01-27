@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-export default function DynamicPage({ params }) {
+export default function MealDetailPage({ params }) {
 	return (
 		<main>
-			<h1>Slug page</h1>
+			<h1>Meal details</h1>
 			<h2>{params.slug}</h2>
 			<p>
 				<Link href="/">Home page</Link>

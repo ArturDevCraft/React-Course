@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-export default function SharePage() {
+export default function ShareMealPage() {
 	return (
 		<main>
-			<h1>Share page</h1>
+			<h1>Share meal page</h1>
 			<p>
 				<Link href="/meals">Meals page</Link>
 			</p>
