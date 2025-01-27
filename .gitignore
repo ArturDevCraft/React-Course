@@ -1,4 +1,5 @@
 **/node_modules/
+**/.next/
 .DS_Store
 Project 23 - Authentication in REACT app/backend/events.json
 Project 25 - Tanstack query/backend/data/events.json
