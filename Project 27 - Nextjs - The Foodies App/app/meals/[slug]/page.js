@@ -1,16 +1,33 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
+import classes from './page.module.css';
+import { getMeal } from '@/lib/meals';
+
 export default function MealDetailPage({ params }) {
+	const meal = getMeal(params.slug);
+	meal.instructions = meal.instructions.replace(/\n/g, '<br />');
+
 	return (
-		<main>
-			<h1>Meal details</h1>
-			<h2>{params.slug}</h2>
-			<p>
-				<Link href="/">Home page</Link>
-			</p>
-			<p>
-				<Link href="meals/share">Share page</Link>
-			</p>
-		</main>
+		<>
+			<header className={classes.header}>
+				<div className={classes.image}>
+					<Image src={meal.image} alt={meal.title} fill />
+				</div>
+				<div className={classes.headerText}>
+					<h1>{meal.title}</h1>
+					<p className={classes.creator}>
+						by <a href={`mailto:${meal.creator_email}`}>{meal.creator}</a>
+					</p>
+					<p className={classes.summary}>SUMMARY</p>
+				</div>
+			</header>
+			<main>
+				<p
+					className={classes.instructions}
+					dangerouslySetInnerHTML={{ __html: meal.instructions }}
+				></p>
+			</main>
+		</>
 	);
 }
