@@ -26,8 +26,19 @@ const DUMMY_MEETUPS = [
 		description: 'This is a third meetup!',
 	},
 ];
-function HomePage() {
-	return <MeetupList meetups={DUMMY_MEETUPS} />;
+function HomePage(props) {
+	return <MeetupList meetups={props.meetups} />;
+}
+
+//getStaticProps is used during build process to fetch data and generate static page
+export async function getStaticProps() {
+	//fetch data from an API
+	return {
+		props: {
+			meetups: DUMMY_MEETUPS,
+		},
+		revalidate: 10, //how often (seconds) data will be refetched (and page regenereted with new data)
+	};
 }
 
 export default HomePage;
