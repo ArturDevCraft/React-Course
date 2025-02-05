@@ -1,3 +1,5 @@
+import { MongoClient } from 'mongodb';
+
 import MeetupList from '../components/meetups/MeetupList';
 
 const DUMMY_MEETUPS = [
@@ -44,11 +46,26 @@ function HomePage(props) {
 //getStaticProps is used during build process to fetch data and generate static page after deployment
 export async function getStaticProps() {
 	//fetch data from an API
+	const client = await MongoClient.connect(
+		'mongodb+srv://arturczerwiak:Kz1GFygLSnuhFGh7@cluster0.tv7bi.mongodb.net/meetups?retryWrites=true&w=majority&appName=Cluster0'
+	);
+
+	const db = client.db();
+	const meetupsCollection = db.collection('meetups');
+
+	const meetups = await meetupsCollection.find().toArray();
+	client.close();
+
 	return {
 		props: {
-			meetups: DUMMY_MEETUPS,
+			meetups: meetups.map((meetup) => ({
+				title: meetup.title,
+				address: meetup.address,
+				image: meetup.image,
+				id: meetup._id.toString(),
+			})),
 		},
-		revalidate: 10, //how often (seconds) data will be refetched (and page regenereted with new data)
+		revalidate: 1, //how often (seconds) data will be refetched (and page regenereted with new data)
 	};
 }
 
