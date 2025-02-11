@@ -8,6 +8,7 @@ function App() {
 				<h2>Why work with us?</h2>
 				<Accordion className="accordion">
 					<AccordionItem
+						id="experience"
 						className="accordion-item"
 						title="We got 20 year of experience"
 					>
@@ -21,6 +22,7 @@ function App() {
 					</AccordionItem>
 
 					<AccordionItem
+						id="local-guide"
 						className="accordion-item"
 						title="We're working with local guides"
 					>
