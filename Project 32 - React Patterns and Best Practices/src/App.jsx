@@ -6,24 +6,30 @@ function App() {
 			<section>
 				<h2>Why work with us?</h2>
 				<Accordion className="accordion">
-					<Accordion.Item
-						id="experience"
-						className="accordion-item"
-						title="We got 20 year of experience"
-					>
-						<article>
-							<p>You can&apos;t go wrong with us.</p>
-							<p>
-								We are in the business of planning highly individualized
-								vacation trips for more than 20 years.
-							</p>
-						</article>
+					<Accordion.Item className="accordion-item">
+						<Accordion.Title id="experience" className="accordion-item-title">
+							We got 20 year of experience
+						</Accordion.Title>
+						<Accordion.Content
+							className="accordion-item-content"
+							id="experience"
+						>
+							<article>
+								<p>You can&apos;t go wrong with us.</p>
+								<p>
+									We are in the business of planning highly individualized
+									vacation trips for more than 20 years.
+								</p>
+							</article>
+						</Accordion.Content>
 					</Accordion.Item>
 
-					<Accordion.Item
+					<Accordion.Title id="local-guide" className="accordion-item-title">
+						We're working with local guides
+					</Accordion.Title>
+					<Accordion.Content
+						className="accordion-item-content"
 						id="local-guide"
-						className="accordion-item"
-						title="We're working with local guides"
 					>
 						<article>
 							<p>We are not doing this along from our office.</p>
@@ -32,7 +38,7 @@ function App() {
 								pleasant vacation.
 							</p>
 						</article>
-					</Accordion.Item>
+					</Accordion.Content>
 				</Accordion>
 			</section>
 		</main>
