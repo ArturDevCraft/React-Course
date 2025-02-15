@@ -16,8 +16,7 @@ const configureStore = () => {
 				...curState.products[indexEditingProduct],
 				isFavorite: updatedProductFavStatus,
 			};
-
-			return { products: curState.products };
+			return { products: updatedProducts };
 		},
 	};
 
