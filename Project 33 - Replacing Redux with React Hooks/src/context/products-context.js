@@ -38,13 +38,15 @@ export default (props) => {
 			(item) => item.id === id
 		);
 
-		const updatedProduct = {
-			...productsList[indexEditingProduct],
-			isFavorite: !productsList[indexEditingProduct].isFavorite,
-		};
+		const updatedProductFavStatus =
+			!productsList[indexEditingProduct].isFavorite;
+
 		setProductsList((prev) => {
 			const updatedProducts = [...prev];
-			updatedProducts[indexEditingProduct] = { ...updatedProduct };
+			updatedProducts[indexEditingProduct] = {
+				...prev[indexEditingProduct],
+				isFavorite: updatedProductFavStatus,
+			};
 			return updatedProducts;
 		});
 	};
