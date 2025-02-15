@@ -5,7 +5,7 @@ import './ProductItem.css';
 import { useStore } from '../../hooks-store/store';
 
 const ProductItem = (props) => {
-	const productsToggleFn = useStore()[1];
+	const productsToggleFn = useStore(false)[1];
 	const toggleFavHandler = () => {
 		productsToggleFn('TOGGLE_FAV', props.id);
 	};
