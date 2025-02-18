@@ -36,3 +36,9 @@ let people: {
 	name: string;
 	age: number;
 }[];
+
+// Type inference
+
+let course = 'React - The Complete Guide';
+
+course = 12;
