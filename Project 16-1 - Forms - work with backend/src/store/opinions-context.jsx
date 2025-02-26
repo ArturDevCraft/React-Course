@@ -12,7 +12,9 @@ export function OpinionsContextProvider({ children }) {
 
 	useEffect(() => {
 		async function loadOpinions() {
-			const response = await fetch('http://localhost:3000/opinions');
+			const response = await fetch(
+				'https://react-course-project-16-1-backend.onrender.com/opinions'
+			);
 			const opinions = await response.json();
 			setOpinions(opinions);
 		}
@@ -21,13 +23,16 @@ export function OpinionsContextProvider({ children }) {
 	}, []);
 
 	async function addOpinion(enteredOpinionData) {
-		const response = await fetch('http://localhost:3000/opinions', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(enteredOpinionData),
-		});
+		const response = await fetch(
+			'https://react-course-project-16-1-backend.onrender.com/opinions',
+			{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(enteredOpinionData),
+			}
+		);
 
 		if (!response.ok) {
 			return;
@@ -39,7 +44,9 @@ export function OpinionsContextProvider({ children }) {
 
 	async function upvoteOpinion(id) {
 		const response = await fetch(
-			'http://localhost:3000/opinions/' + id + '/upvote',
+			'https://react-course-project-16-1-backend.onrender.com/opinions/' +
+				id +
+				'/upvote',
 			{
 				method: 'POST',
 			}
@@ -61,7 +68,9 @@ export function OpinionsContextProvider({ children }) {
 
 	async function downvoteOpinion(id) {
 		const response = await fetch(
-			'http://localhost:3000/opinions/' + id + '/downvote',
+			'https://react-course-project-16-1-backend.onrender.com/opinions/' +
+				id +
+				'/downvote',
 			{
 				method: 'POST',
 			}
