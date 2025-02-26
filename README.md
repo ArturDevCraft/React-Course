@@ -11,7 +11,7 @@ Links to deployed verssion of projects done during the course:
 - [Project 10 - Quiz project](https://react-course-olive.vercel.app/)
 - [Project 11 - look behind the scenes of react](https://react-course-project-11.vercel.app/)
 - [Project 12 - class-based components](https://react-course-project-12.vercel.app/)
-- [Project 13 - sending Http Requests]()
+- [Project 13 - sending Http Requests](https://react-coure-project-13-frontend-6la7gtks7.vercel.app/)
 - [Project 14 - Custom React Hooks]()
 - [Project 15 - Forms and User input]()
 - [Project 16 - Form actions]()
