@@ -23,7 +23,10 @@ export default function Checkout() {
 		error,
 		sendRequest,
 		clearData,
-	} = useHttp('http://localhost:3000/orders', requestConfig);
+	} = useHttp(
+		'https://react-course-project-17-backend.onrender.com/orders',
+		requestConfig
+	);
 
 	const cartTotal = cartCtx.items.reduce(
 		(totalPrice, item) => totalPrice + item.quantity * item.price,

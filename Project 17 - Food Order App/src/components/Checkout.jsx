@@ -18,7 +18,7 @@ export default function Checkout() {
 	const userProgressCtx = useContext(UserProgressContext);
 
 	const { data, error, sendRequest, clearData } = useHttp(
-		'http://localhost:3000/orders',
+		'https://react-course-project-17-backend.onrender.com/orders',
 		requestConfig
 	);
 
