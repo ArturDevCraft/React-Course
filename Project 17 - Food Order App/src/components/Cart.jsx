@@ -4,7 +4,7 @@ import Modal from './UI/Modal';
 import Button from './UI/Button';
 import CartContext from '../store/CartContext';
 import UserProgressContext from '../store/UserProgressContext';
-import CartItem from './Cartitem';
+import CartItem from './CartItem';
 
 export default function Cart() {
 	const cartCtx = useContext(CartContext);
