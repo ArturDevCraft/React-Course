@@ -8,8 +8,8 @@ export default async function Home() {
 		setTimeout(async () => {
 			const data = await fs.readFile('dummy-db.json', 'utf-8');
 			const users = JSON.parse(data);
-			// resolve(users);
-			reject(new Error('Error'));
+			resolve(users);
+			// reject(new Error('Error'));
 		}, 2000)
 	);
 	return (
