@@ -1,3 +1,5 @@
+# My React learning process
+
 This repository is not entirely my own work. It only reflects my learning process during the course: "React - The Complete Guide 2025 (incl. Next.js, Redux)".
 
 I decided to commit progress (unfortunately in the middle of the course) and finally deploy most of the projects to show them in action - this also gave me experience in deploying applications and related problems.
@@ -21,13 +23,12 @@ Links to deployed verssion of projects done during the course:
 - [Project 16 - Form actions](https://react-course-project-16.vercel.app/)
 - [^1] [Project 16-1 - Forms - work with backend](https://react-course-project-16-1-frontend.vercel.app/)
 - [^1] [Project 17 - Food Order App](https://react-course-project-17.vercel.app/)
-- [Project 18 - REDUX basics]()
 - [Project 19 - REDUX with react](https://react-course-project-19.vercel.app/)
 - [Project 20 - Advanced REDUX](https://react-course-project-20.vercel.app/)
 - [Project 21 - React Router](https://react-course-project-21.vercel.app/)
 - [^1] [Project 22 - React Router - practice](https://react-course-project-22-frontend.vercel.app/)
 - [^1] [Project 23 - Authentication in REACT app](https://react-course-project-23-frontend.vercel.app/)
-- [Project 24 - Deploying React Apps]()
+- [Project 24 - Deploying React Apps](https://react-demo-deployment-f4bcd.web.app/)
 - [^1] [Project 25 - Tanstack query](https://react-course-project-25-frontend.vercel.app/)
 - [Project 26 - Nextjs](https://react-course-project-26.vercel.app/)
 - [^1] [Project 27 - Nextjs - The Foodies App](https://react-course-project-27.onrender.com)
