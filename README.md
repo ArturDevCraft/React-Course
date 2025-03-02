@@ -20,7 +20,7 @@ Links to deployed verssion of projects done during the course:
 - [Project 15 - Forms and User input](https://react-course-project-15.vercel.app/)
 - [Project 16 - Form actions](https://react-course-project-16.vercel.app/)
 - [Project 16-1 - Forms - work with backend](https://react-course-project-16-1-frontend.vercel.app/)
-- [Project 17 - Food Order App](https://react-course-project-17.vercel.app/)[^1]
+- [^1] [Project 17 - Food Order App](https://react-course-project-17.vercel.app/)
 - [Project 18 - REDUX basics]()
 - [Project 19 - REDUX with react]()
 - [Project 20 - Advanced REDUX]()
@@ -40,5 +40,5 @@ Links to deployed verssion of projects done during the course:
 - [Project 34 - Testing React Apps - Unit Tests]()
 - [Project 36 - Typesricpt with React]()
 
-Most projects are deployed on vercel platform.
-[^1]: Fullstack projects and projects where was needed backend with operations on files are deployed on render.com platform. Free instance will spin down with inactivity, which can delay requests by 50 seconds or more.
+[^1]:Most projects are deployed on vercel platform.
+ Fullstack projects and projects where was needed backend with operations on files are deployed on render.com platform. Free instance will spin down with inactivity, which can delay requests by 50 seconds or more.
